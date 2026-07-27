@@ -1,0 +1,101 @@
+/* ===============================
+   Propitious Healthcare Solutions
+   Custom Styling
+================================= */
+
+.logo img{
+    max-height:70px;
+}
+
+.header-top{
+    background:#0b6a77;
+}
+
+.header-top li,
+.header-top i{
+    color:#fff;
+}
+
+.header-social a{
+    color:#fff;
+}
+
+.hero__caption h1{
+    font-size:58px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.hero__caption span{
+    color:#25b7d3;
+    font-size:18px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.hero__caption p{
+    font-size:18px;
+    line-height:1.9;
+    max-width:700px;
+}
+
+.btn{
+    border-radius:40px;
+    padding:16px 38px;
+}
+
+.section-tittle h2{
+    font-size:42px;
+    font-weight:700;
+}
+
+.single-cat,
+.single-services,
+.single-team{
+    transition:.35s;
+}
+
+.single-cat:hover,
+.single-services:hover,
+.single-team:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+.cat-icon i{
+    color:#0b6a77;
+}
+
+.footer-area{
+    background:#071d2a !important;
+}
+
+.footer-area p,
+.footer-area li,
+.footer-area a{
+    color:#d9d9d9;
+}
+
+.footer-area h4{
+    color:#fff;
+}
+
+.footer-social a{
+    width:42px;
+    height:42px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#0b6a77;
+    color:#fff;
+    margin-right:10px;
+}
+
+.footer-social a:hover{
+    background:#25b7d3;
+}
+
+.section-padding80{
+    padding:100px 0;
+}
