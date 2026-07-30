@@ -3051,7 +3051,7 @@ hero-btn {
   display: inline-block;
   position: relative;
   padding-left: 68px;
-}
+} 
 
 @media (max-width: 575px) {
   /* line 940, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
@@ -3968,7 +3968,7 @@ hero-btn {
   content: "";
   width: 100%;
   height: 0;
-  background: #ff2143;
+  background: #e7899f;
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
   -ms-transition: all 0.4s ease-out 0s;
@@ -4221,6 +4221,7 @@ hero-btn {
 /* line 11, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
 .services-area .single-services .services-img img {
   width: 100%;
+  height: 700px;
 }
 
 /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
