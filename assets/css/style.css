@@ -31,7 +31,9 @@
 .white-bg {
   background: #ffffff;
 }
-
+html,body{
+  overflow-x: hidden;
+}
 /* line 37, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_color.scss */
 .gray-bg {
   background: #f5f5f5;
