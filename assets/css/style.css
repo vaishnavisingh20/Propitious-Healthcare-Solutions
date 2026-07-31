@@ -539,7 +539,7 @@ hr {
   z-index: 1;
   border: 0;
   overflow: hidden;
-  margin: 0;
+  margin: 15px;
 }
 .hero-btn-outline{
     display:inline-block;
