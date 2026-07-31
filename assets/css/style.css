@@ -4223,7 +4223,13 @@ hero-btn {
 /* line 11, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
 .services-area .single-services .services-img img {
   width: 100%;
-  height: 700px;
+  height: 500px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .services-area .single-services .services-img img {
+    height: 220px;
+  }
 }
 
 /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
