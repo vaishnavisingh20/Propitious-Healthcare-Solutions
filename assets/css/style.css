@@ -3588,7 +3588,16 @@ hero-btn {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.slider-area3 {
+  background-image: url(../img/hero/hero3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-area4 {
+  background-image: url(../img/hero/hero4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* line 37, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-area {
   margin-top: -1px;
@@ -3799,10 +3808,30 @@ hero-btn {
   text-transform: capitalize;
   line-height: 1;
 }
-
+.slider-area3 .hero-cap h2 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
+.slider-area4 .hero-cap h2 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 177, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
   .slider-area2 .hero-cap h2 {
+    font-size: 50px;
+  }
+
+  .slider-area3 .hero-cap h2 {
+    font-size: 50px;
+  }
+  .slider-area4 .hero-cap h2 {
     font-size: 50px;
   }
 }
@@ -3832,7 +3861,55 @@ hero-btn {
 .slider-area2 .hero-cap .breadcrumb-item + .breadcrumb-item::before {
   color: #dcdcdc;
 }
+@media (max-width: 575px) {
+  /* line 177, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+  .slider-area4 .hero-cap h2 {
+    font-size: 35px;
+  }
+}
 
+/* line 190, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area4 .hero-cap .breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 195, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area4 .hero-cap .breadcrumb a {
+  color: #dcdcdc;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+/* line 201, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area4 .hero-cap .breadcrumb-item + .breadcrumb-item::before {
+  color: #dcdcdc;
+}
+@media (max-width: 575px) {
+  .slider-area3 .hero-cap h2 {
+    font-size: 35px;
+  }
+}
+
+/* line 190, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area3 .hero-cap .breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 195, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area3 .hero-cap .breadcrumb a {
+  color: #dcdcdc;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+/* line 201, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
+.slider-area3 .hero-cap .breadcrumb-item + .breadcrumb-item::before {
+  color: #dcdcdc;
+}
 /* line 212, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-active button.slick-arrow {
   position: absolute;
