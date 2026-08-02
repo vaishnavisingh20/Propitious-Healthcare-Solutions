@@ -214,27 +214,54 @@ Get Consultation
                         <h2 class="contact-title">Get in Touch with PHSPL</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="contactForm">
+      <input type="hidden" name="access_key" value="e2a14daa-8e81-48c1-a509-2a078f041d79">
+      <input
+type="hidden"
+name="subject"
+value="New enquiry from PHSPL Website">
+   <input type="checkbox" name="botcheck" style="display:none">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message"
-placeholder="Tell us how we can help you"></textarea> </div>
+                                        <textarea
+class="form-control w-100"
+name="message"
+id="message"
+placeholder="Tell us how we can help you"
+required></textarea> </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'" placeholder="Your name">
-                                    </div>
+                                        <input
+class="form-control valid"
+name="name"
+id="name"
+type="text"
+placeholder="Your name"
+required></div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" placeholder="Your email address">
-                                    </div>
+                                        <input
+class="form-control valid"
+name="email"
+id="email"
+type="email"
+placeholder="Your email address"
+required></div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" placeholder="Subject">
-                                    </div>
+                                        <input
+class="form-control"
+name="user_subject"
+id="subject"
+type="text"
+placeholder="Subject"></div>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
@@ -522,17 +549,65 @@ All Rights Reserved.
         <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="./assets/js/jquery.counterup.min.js"></script>
 
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
         
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
+<!-- Success Popup -->
+<div id="successPopup" class="popup-overlay">
+    <div class="popup-box">
+        <div class="popup-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>Your enquiry has been sent successfully.<br>Our team will contact you soon.</p>
 
+        <button onclick="closePopup()" class="popup-btn">
+            OK
+        </button>
+    </div>
+</div>
+<script>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    // Disable button
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Sending...";
+
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: data
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById("successPopup").style.display = "flex";
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        alert("Unable to send your message. Please try again.");
+    }
+
+    // Enable button again
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = "Send";
+});
+
+function closePopup() {
+    document.getElementById("successPopup").style.display = "none";
+}
+</script>
     </body>
     
 </html>
